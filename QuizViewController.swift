@@ -22,22 +22,15 @@ class QuizViewController: UIViewController, AVSpeechSynthesizerDelegate {
     var spokenText = ""
     var bcpCode = ""
     let speechSynth = AVSpeechSynthesizer()
-    
   
-  
-  
-  
-
-  
-  
-  
-  
+  // Event listener method for any 3 of the flag buttons clicked.
+  // Displays string alerts depending on clicked button is the correct button or not.
   @IBAction func flagButtonPressed(sender: UIButton) {
     
     if sender.tag == correctButtonTag{
-        displayAlert("Correct",  messageText: "Good choice!")
+        displayAlert("Correct",  messageText: "Very Good choice!")
     }else{
-        displayAlert("Incorrect", messageText: "Nope. Try again!")
+        displayAlert("Incorrect", messageText: "Nope Wrong. Try again!")
     }
     
   }
